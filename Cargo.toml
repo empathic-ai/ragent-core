@@ -10,3 +10,5 @@ description = "A framework for building LLM agents."
 [dependencies]
 documented = "0.1.2"
 bevy = { version = "0.13.0", default-features = false }
+serde = { version = "1.0.149", features = ["derive"] }
+prost = "0.12.1"
