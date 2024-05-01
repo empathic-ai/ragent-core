@@ -1,8 +1,12 @@
 use std::fmt::Display;
 use serde::{Deserialize, Deserializer, Serialize, Serializer};
-use bevy::{prelude::*, utils::Uuid};
+use uuid::Uuid;
 
-#[derive(Reflect, Clone, PartialEq, ::prost::Message, Hash, Eq)]
+#[cfg(feature = "bevy")]
+use bevy::{prelude::*};
+
+#[derive(Clone, PartialEq, ::prost::Message, Hash, Eq)]
+#[cfg_attr(feature = "bevy", derive(Reflect))]
 pub struct Thing {
     #[prost(string, tag = "1")]
     pub id: ::prost::alloc::string::String
