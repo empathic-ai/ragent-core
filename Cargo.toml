@@ -8,8 +8,9 @@ description = "A framework for building LLM agents."
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [features]
-default = ["bevy"]
+default = ["bevy", "dynamic_linking"]
 bevy = ["dep:bevy"]
+dynamic_linking = ["bevy?/dynamic_linking"]
 
 [dependencies]
 documented = "0.1.2"
@@ -18,13 +19,4 @@ serde = { version = "1.0.149", features = ["derive"] }
 uuid = { version = "1.2.2", features = ["v4"] }
 # blake3 = { version = "1.5.1", features = ["pure"] }
 # my-workspace-hack = { version = "0.1", path = "../../../my-workspace-hack" }
-
-[dependencies.bevy]
-version = "=0.14.0"
-default-features = false
-optional = true
-
-[target.'cfg(not(target_arch = "wasm32"))'.dependencies.bevy]
-version = "=0.14.0"
-features = ["dynamic_linking"]
-optional = true
+bevy = { version = "=0.14.0", default-features = false, optional = true }
