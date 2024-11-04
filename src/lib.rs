@@ -1,3 +1,6 @@
+#![allow(warnings)]
+#![allow(unused)]
+
 pub mod thing;
 pub mod task;
 
