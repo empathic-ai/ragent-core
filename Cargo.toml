@@ -16,4 +16,4 @@ dynamic_linking = ["bevy?/dynamic_linking"]
 documented = "0.1.2"
 serde = { version = "1.0.149", features = ["derive"] }
 uuid = { version = "1.2.2", features = ["v4"] }
-bevy = { version = "=0.14.0", default-features = false, optional = true }
+bevy = { version = "=0.15.0", default-features = false, optional = true }
