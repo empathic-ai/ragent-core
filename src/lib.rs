@@ -1,8 +1,8 @@
 #![allow(warnings)]
 #![allow(unused)]
 
-pub mod thing;
 pub mod task;
+pub mod thing;
 
 pub mod prelude {
     pub use crate::task::*;
